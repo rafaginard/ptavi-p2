@@ -9,6 +9,8 @@ class Clase(ClaseMadre):
     self.atributo = valor
 
 if __name__ == "__main__":
-  objeto = Clase("pepe") # Creo un objeto de la clase Clase
+    objeto = Clase("pepe") # Creo un objeto de la clase Clase
                          # y le paso el valor pepe para su
                          # atributo en la inicialización
+
+print ("Esto es una prueba")
