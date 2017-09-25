@@ -17,15 +17,16 @@ from calcoo import Calculadora
 ##        return (self.valor1 - self.valor2)
 ##
 class CalculadoraHija(Calculadora):
-    def __init__(self, valor1, valor2):
-        self.valor1 = valor1
-        self.valor2 = valor2
 
     def multiplicacion(self):
         return self.valor1 * self.valor2
 
     def division(self):
-        return self.valor1 / self.valor2
+        try:
+            return self.valor1 / self.valor2
+        except ZeroDivisionError:
+            print ("Division by zero is not allowed")
+
 
 if __name__ == "__main__":
     operacion = CalculadoraHija(int(sys.argv[1]), int(sys.argv[3]))
@@ -38,5 +39,4 @@ if __name__ == "__main__":
         result = operacion.multiplicacion()
     elif sys.argv[2] == "dividido":
         result = operacion.division()
-
     print (result)
