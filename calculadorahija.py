@@ -6,9 +6,9 @@ import sys
 
 
 class Calculadora:
-    def __init__(self, valor1, valor2):
-        self.valor1 = valor1
-        self.valor2 = valor2
+    #def __init__(self, valor1, valor2):
+    #    self.valor1 = valor1
+    #    self.valor2 = valor2
     def suma(self):
         return (self.valor1 + self.valor2)
     def resta(self):
@@ -28,9 +28,13 @@ class CalculadoraHija(Calculadora):
 if __name__ == "__main__":
     operacion = CalculadoraHija(int(sys.argv[1]), int(sys.argv[3]))
 
-    if sys.argv[2] == "por":
+    if sys.argv[2] == "suma":
+        result = operacion.suma()
+    elif sys.argv[2] == "resta":
+        result = operacion.resta()
+    elif sys.argv[2] == "por":
         result = operacion.multiplicacion()
     elif sys.argv[2] == "dividido":
         result = operacion.division()
+
     print (result)
-    print ("Este va a ser la calculadora")
