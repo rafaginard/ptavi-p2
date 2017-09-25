@@ -2,18 +2,20 @@
 # -*- coding: utf-8 -*-
 
 import sys
+from calcoo import Calculadora
 
+### Se puede poner la clase directamente en le archivo o bien importarlo
+### con comando from **** import **** ###
 
-
-class Calculadora:
+#class Calculadora:
     #def __init__(self, valor1, valor2):
     #    self.valor1 = valor1
     #    self.valor2 = valor2
-    def suma(self):
-        return (self.valor1 + self.valor2)
-    def resta(self):
-        return (self.valor1 - self.valor2)
-
+##    def suma(self):
+##        return (self.valor1 + self.valor2)
+##    def resta(self):
+##        return (self.valor1 - self.valor2)
+##
 class CalculadoraHija(Calculadora):
     def __init__(self, valor1, valor2):
         self.valor1 = valor1
