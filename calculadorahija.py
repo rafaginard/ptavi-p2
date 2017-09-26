@@ -4,18 +4,20 @@
 import sys
 from calcoo import Calculadora
 
-### Se puede poner la clase directamente en le archivo o bien importarlo
-### con comando from **** import **** ###
+# Se puede poner la clase directamente en le archivo o bien importarlo
+# con comando from **** import **** ###
 
-#class Calculadora:
-    #def __init__(self, valor1, valor2):
-    #    self.valor1 = valor1
-    #    self.valor2 = valor2
-##    def suma(self):
-##        return (self.valor1 + self.valor2)
-##    def resta(self):
-##        return (self.valor1 - self.valor2)
-##
+# class Calculadora:
+#     def __init__(self, valor1, valor2):
+#        self.valor1 = valor1
+#        self.valor2 = valor2
+#    def suma(self):
+#        return (self.valor1 + self.valor2)
+#    def resta(self):
+#        return (self.valor1 - self.valor2)
+#
+
+
 class CalculadoraHija(Calculadora):
 
     def multiplicacion(self):
@@ -25,7 +27,7 @@ class CalculadoraHija(Calculadora):
         try:
             return self.valor1 / self.valor2
         except ZeroDivisionError:
-            print ("Division by zero is not allowed")
+            print("Division by zero is not allowed")
 
 
 if __name__ == "__main__":
@@ -39,4 +41,4 @@ if __name__ == "__main__":
         result = operacion.multiplicacion()
     elif sys.argv[2] == "dividido":
         result = operacion.division()
-    print (result)
+    print(result)
