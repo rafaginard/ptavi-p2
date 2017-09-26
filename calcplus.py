@@ -4,7 +4,7 @@
 import sys
 import csv
 
-with open("fichero.csv", newline = "") as csvfile:
+with open(sys.argv[1], newline="") as csvfile:
     operaciones = csv.reader(csvfile)
     result = 0
     for operacion in operaciones:
@@ -16,22 +16,22 @@ with open("fichero.csv", newline = "") as csvfile:
             for operandos in operadores[1:]:
                 result += int(operandos)
 
-            print (result)
+            print(result)
         elif operador == "resta":
             result = int(operacion[1])
             for operandos in operadores[1:]:
                 result -= int(operandos)
 
-            print (result)
+            print(result)
         elif operador == "multiplica":
             result = int(operacion[1])
             for operandos in operadores[1:]:
                 result *= int(operandos)
 
-            print (result)
+            print(result)
         elif operador == "divide":
             result = int(operacion[1])
             for operandos in operadores[1:]:
                 result /= int(operandos)
-                
-            print (result)
+
+            print(result)
