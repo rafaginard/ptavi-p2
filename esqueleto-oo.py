@@ -1,17 +1,20 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+
 class Clase:
-  "Esto es un ejemplo de clase que hereda de ClaseMadre"
+#   "Esto es un ejemplo de clase que hereda de ClaseMadre"
 
   def __init__(self, valor):
-    "Esto es el método iniciliazador"
+#   "Esto es el método iniciliazador"
     self.atributo = valor
 
 if __name__ == "__main__":
-    objeto = Clase("pepe") # Creo un objeto de la clase Clase
-                         # y le paso el valor pepe para su
-                         # atributo en la inicialización
+    objeto = Clase("pepe")
 
-print (objeto.atributo)
-print ("Esto es una prueba")
+#   Creo un objeto de la clase Clase
+#   y le paso el valor pepe para su
+#   atributo en la inicialización
+
+print(objeto.atributo)
+print("Esto es una prueba")
