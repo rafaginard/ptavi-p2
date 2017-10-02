@@ -6,7 +6,7 @@ import calcoohija
 import csv
 
 if len(sys.argv) != 2:
-    sys.exit("Input: ./calcplusplus.py fichero")
+    sys.exit("Try: ./calcplusplus.py fichero")
 
 with open(sys.argv[1], newline="") as csvfile:
     operaciones = csv.reader(csvfile)
