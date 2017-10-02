@@ -21,4 +21,4 @@ if __name__ == "__main__":
         result = operacion.suma()
     elif sys.argv[2] == "resta":
         result = operacion.resta()
-        print(result)
+    print(result)
