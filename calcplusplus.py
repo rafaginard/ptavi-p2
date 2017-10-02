@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import calculadorahija
+import calcoohija
 import csv
 
 if len(sys.argv) != 2:
@@ -24,21 +24,21 @@ with open(sys.argv[1], newline="") as csvfile:
             if operador == "suma":
                 result = int(operacion[1])
                 for operandos in operadores[1:]:
-                    operar = calculadorahija.CalculadoraHija(result, int(operandos))
+                    operar = calcoohija.CalculadoraHija(result, int(operandos))
                     result = operar.suma()
 
                 print(result)
             elif operador == "resta":
                 result = int(operacion[1])
                 for operandos in operadores[1:]:
-                    operar = calculadorahija.CalculadoraHija(result, int(operandos))
+                    operar = calcoohija.CalculadoraHija(result, int(operandos))
                     result = operar.resta()
 
                 print(result)
             elif operador == "multiplica":
                 result = int(operacion[1])
                 for operandos in operadores[1:]:
-                    operar = calculadorahija.CalculadoraHija(result, int(operandos))
+                    operar = calcoohija.CalculadoraHija(result, int(operandos))
                     result = operar.multiplicacion()
 
                 print(result)
@@ -46,7 +46,7 @@ with open(sys.argv[1], newline="") as csvfile:
                 result = int(operacion[1])
                 try:
                     for operandos in operadores[1:]:
-                        operar = calculadorahija.CalculadoraHija(result, int(operandos))
+                        operar = calcoohija.CalculadoraHija(result, int(operandos))
                         result = operar.division()
                     print(result)
                 except TypeError:
