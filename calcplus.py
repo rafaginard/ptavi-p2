@@ -46,7 +46,8 @@ with open(sys.argv[1], newline="") as csvfile:
                 result = int(operacion[1])
                 try:
                     for operandos in operadores[1:]:
-                        operar = calcoohija.CalculadoraHija(result, int(operandos))
+                        operar = calcoohija.CalculadoraHija(result,
+                                                            int(operandos))
                         result = operar.division()
                     print(result)
                 except TypeError:
