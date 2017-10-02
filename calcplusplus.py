@@ -19,38 +19,22 @@ with open(sys.argv[1], newline="") as csvfile:
             sys.exit("Can't read operation")
 #  Me quedo con la parte de la lista de los operadores.
         operadores = operacion[1:]
+        result = int(operacion[1])
+        for operandos in operadores[1:]:
+            try:
+                operar = calcoohija.CalculadoraHija(result, int(operandos))
+            except ValueError:
+                sys.exit("Error reading value")
 
-        try:
             if operador == "suma":
-                result = int(operacion[1])
-                for operandos in operadores[1:]:
-                    operar = calcoohija.CalculadoraHija(result, int(operandos))
-                    result = operar.suma()
-
-                print(result)
+                result = operar.suma()
             elif operador == "resta":
-                result = int(operacion[1])
-                for operandos in operadores[1:]:
-                    operar = calcoohija.CalculadoraHija(result, int(operandos))
-                    result = operar.resta()
-
-                print(result)
+                result = operar.resta()
             elif operador == "multiplica":
-                result = int(operacion[1])
-                for operandos in operadores[1:]:
-                    operar = calcoohija.CalculadoraHija(result, int(operandos))
-                    result = operar.multiplicacion()
-
-                print(result)
+                result = operar.multiplicacion()
             elif operador == "divide":
-                result = int(operacion[1])
                 try:
-                    for operandos in operadores[1:]:
-                        operar = calcoohija.CalculadoraHija(result,
-                                                            int(operandos))
-                        result = operar.division()
-                    print(result)
+                    result = operar.division()
                 except TypeError:
                     sys.exit
-        except ValueError:
-            sys.exit("Error reading value")
+        print(result)
