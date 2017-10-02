@@ -32,15 +32,15 @@ class CalculadoraHija(Calculadora):
 
 if __name__ == "__main__":
     operacion = CalculadoraHija(int(sys.argv[1]), int(sys.argv[3]))
-try:
-    if sys.argv[2] == "suma":
-        result = operacion.suma()
-    elif sys.argv[2] == "resta":
-        result = operacion.resta()
-    elif sys.argv[2] == "por":
-        result = operacion.multiplicacion()
-    elif sys.argv[2] == "dividido":
-        result = operacion.division()
-    print(result)
-except NameError:
-    sys.exit("Can only: suma, resta, por, dividido")
+    try:
+        if sys.argv[2] == "suma":
+            result = operacion.suma()
+        elif sys.argv[2] == "resta":
+            result = operacion.resta()
+        elif sys.argv[2] == "por":
+            result = operacion.multiplicacion()
+        elif sys.argv[2] == "dividido":
+            result = operacion.division()
+        print(result)
+    except NameError:
+        sys.exit("Can only: suma, resta, por, dividido")
