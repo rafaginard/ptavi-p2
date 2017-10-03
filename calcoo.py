@@ -14,11 +14,14 @@ class Calculadora:
     def resta(self):
         return (self.valor1 - self.valor2)
 
-if __name__ == "__main__":
+def operaciones(arg):
     operacion = Calculadora(int(sys.argv[1]), int(sys.argv[3]))
-
-    if sys.argv[2] == "suma":
+    if arg == "suma":
         result = operacion.suma()
-    elif sys.argv[2] == "resta":
+    elif arg == "resta":
         result = operacion.resta()
+    return(result)
+
+if __name__ == "__main__":
+    result = operaciones(sys.argv[2])
     print(result)
